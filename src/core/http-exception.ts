@@ -17,11 +17,46 @@ class ParameterException extends HttpException{
         super();
         this.msg = msg;
         this.errorCode = errorCode;
-        this.code = 400;
+        this.code = 200;
+    }
+}
+
+//认证失败
+class LoginFailed extends HttpException{
+    constructor(msg='登录失败',errorCode=10004) {
+        super();
+        this.msg = msg
+        this.errorCode = errorCode
+        this.code = 200;
+    }
+}
+
+//成功
+class Success extends HttpException{
+     data: object;
+    constructor(data={},msg='ok', errorCode=0) {
+        super();
+        this.code = 200;
+        this.msg = msg;
+        this.errorCode = errorCode
+        this.data = data;
+    }
+}
+
+//禁止
+class Forbidden extends HttpException{
+    constructor(msg='没有权限',errorCode=403) {
+        super();
+        this.code = 200
+        this.msg = msg
+        this.errorCode = errorCode
     }
 }
 
 export {
     HttpException,
-    ParameterException
+    ParameterException,
+    LoginFailed,
+    Success,
+    Forbidden
 }

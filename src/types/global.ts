@@ -1,5 +1,5 @@
-import * as errors from '../core/http-exception'
 import config from "../config";
+import * as errors from '../core/http-exception'
 type Errors = typeof errors;
 type Config = typeof config;
 
