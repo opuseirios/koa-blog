@@ -53,10 +53,21 @@ class Forbidden extends HttpException{
     }
 }
 
+//没找到资源
+class NotFound extends HttpException{
+    constructor(msg='资源未找到',errorCode=404) {
+        super();
+        this.msg = msg;
+        this.errorCode = errorCode
+        this.code = 200;
+    }
+}
+
 export {
     HttpException,
     ParameterException,
     LoginFailed,
     Success,
-    Forbidden
+    Forbidden,
+    NotFound
 }

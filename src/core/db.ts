@@ -13,7 +13,7 @@ const sequelize = new Sequelize(dbName,user,password,{
         createdAt: 'created_at',
         updatedAt: 'updated_at',
         deletedAt: 'deleted_at',
-        paranoid: true,
+        paranoid: false,
         underscored: true,
         freezeTableName: true,
         scopes:{
