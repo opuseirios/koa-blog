@@ -1,14 +1,13 @@
-import {Sequelize,Model} from 'sequelize'
-import {unset,clone,isArray} from 'lodash'
+import {Sequelize, Model} from 'sequelize'
 
-const {dbName,host,password,port,user} = global.config.database
+const {dbName, host, password, port, user} = global.config.database
 
-const sequelize = new Sequelize(dbName,user,password,{
-    dialect:'mysql',
+const sequelize = new Sequelize(dbName, user, password, {
+    dialect: 'mysql',
     host,
     port,
     timezone: '+08:00',
-    define:{
+    define: {
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -16,17 +15,17 @@ const sequelize = new Sequelize(dbName,user,password,{
         paranoid: false,
         underscored: true,
         freezeTableName: true,
-        scopes:{
-            bh:{
+        scopes: {
+            bh: {
                 attributes: {
-                    exclude: ['updated_at','created_at,deleted_at']
+                    exclude: ['updated_at', 'created_at,deleted_at']
                 }
             }
         }
     }
 })
 
-sequelize.sync()
+sequelize.sync();
 
 export {
     sequelize

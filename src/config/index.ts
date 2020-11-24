@@ -1,6 +1,7 @@
 const config = {
     environment:'dev',
     port:9020,
+    host: 'localhost',
     database:{
         dbName: 'myblog',
         host: 'localhost',

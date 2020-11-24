@@ -63,11 +63,22 @@ class NotFound extends HttpException{
     }
 }
 
+//上传失败
+class UploadFailed extends HttpException{
+    constructor(msg='上传失败', errorCode = 405) {
+        super();
+        this.msg = msg
+        this.errorCode = errorCode
+        this.code = 200
+    }
+}
+
 export {
     HttpException,
     ParameterException,
     LoginFailed,
     Success,
     Forbidden,
-    NotFound
+    NotFound,
+    UploadFailed
 }

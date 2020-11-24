@@ -22,18 +22,18 @@ class LoginValidator extends LinValidator {
 // 更新参数校验
 class UpdateValidator extends LinValidator{
     avatar:Rule[]
-    birthday:Rule[]
-    motto: Rule[]
+    summary:Rule[]
+    sex: Rule[]
     constructor() {
         super();
         this.avatar = [
             new Rule('isLength','请上传图片')
         ]
-        this.birthday = [
-            new Rule('isLength','请选择生日')
+        this.summary = [
+            new Rule('isLength','请填写个人简介')
         ]
-        this.motto = [
-            new Rule('isLength','请填写motto')
+        this.sex = [
+            new Rule('isLength','请选择性别')
         ]
     }
 }

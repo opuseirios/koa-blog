@@ -68,7 +68,7 @@ class Auth {
         })
     }
 
-    static decodeToken(ctx:Context) {
+    static decodeToken(ctx: Context) {
         try {
             const userToken = basicAuth(ctx.req)
             return jwt.decode(userToken!.name, {complete: true})

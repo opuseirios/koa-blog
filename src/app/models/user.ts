@@ -62,11 +62,11 @@ User.init({
         type:DataTypes.STRING,
         defaultValue: ''
     },
-    motto: {
+    sex: {
         type:DataTypes.STRING,
-        defaultValue: ''
+        defaultValue: 'm'
     },
-    birthday: {
+    summary: {
         type:DataTypes.STRING,
         defaultValue: ''
     }

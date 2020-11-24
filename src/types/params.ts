@@ -1,11 +1,11 @@
 export interface LoginParams {
-    password:string
-    username:string
+    password: string
+    username: string
 }
 
 export interface UpdateInfoParams {
     username: string,
     avatar: string,
-    birthday: string,
-    motto: string
+    sex: string,
+    summary: string
 }
